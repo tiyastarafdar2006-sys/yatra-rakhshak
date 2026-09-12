@@ -75,7 +75,7 @@ Weather & Altitude  Safe Evacuation Polylines      Time-of-Day Lighting  Live GP
 graph TD
     User([Tourist / Pilgrim / Rescue Authority]) -->|HTTPS / PWA| UI[Frontend Dashboard - index.html]
     
-    subgraph Client-Side Layer
+    subgraph Client_Side_Layer["Client-Side Layer"]
         UI -->|PWA Service Worker| SW[sw.js & manifest.json Cache]
         UI -->|3D WebGL Rendering| ThreeJS[Three.js Engine & Shader Controls]
         UI -->|Multilingual Audio Lore| Speech[Web Speech Synthesis API]
@@ -83,7 +83,7 @@ graph TD
         UI -->|Acoustic Alarm| WebAudio[Web Audio API Siren Generator]
     end
 
-    subgraph FastAPI Safety Engine (Port 8000)
+    subgraph FastAPI_Safety_Engine["FastAPI Safety Engine (Port 8000)"]
         UI -->|POST /api/itinerary/generate| PyAPI[safety_api.py]
         UI -->|POST /api/itinerary/analyze| PyAPI
         UI -->|GET /api/heritage/lore| PyAPI
@@ -96,7 +96,7 @@ graph TD
         PyAPI --> ERSS[112 ERSS / 108 EMS Dispatch Formatter]
     end
 
-    subgraph Express Backend API (Port 5000)
+    subgraph Express_Backend_API["Express Backend API (Port 5000)"]
         UI -->|POST /api/register| NodeAPI[server.js]
         UI -->|POST /api/login| NodeAPI
         UI -->|POST /api/bookings| NodeAPI
