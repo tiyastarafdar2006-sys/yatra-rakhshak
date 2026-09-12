@@ -1,0 +1,23 @@
+{
+  "name": "yatrarakshak",
+  "version": "1.0.0",
+  "description": "Yatra Rakshak tourism and travel-safety prototype",
+  "main": "server.js",
+  "scripts": {
+    "start:api": "node server.js",
+    "start:safety": ".venv\\Scripts\\python.exe -m uvicorn safety_api:app --host 0.0.0.0 --port 8000",
+    "start:web": "python -m http.server 3000",
+    "test": "node --check server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
+  }
+}
