@@ -3791,6 +3791,10 @@ document.addEventListener('DOMContentLoaded', () => {
   window.updateCartTotals();
   window.renderCartItems();
 
+  if (window.location.hash === '#profile') {
+    window.openProfileModal();
+  }
+
   // Initialize interactive Leaflet SafeRoute Map
   setTimeout(() => {
     if (typeof initSafeRouteMap === 'function') {

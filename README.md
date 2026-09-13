@@ -192,8 +192,13 @@ npm run start:safety
 #### Terminal 3: Web Server / Frontend
 ```powershell
 npm run start:web
-# Accessible at http://localhost:3000
+# Accessible at http://localhost:3000/index.html
 ```
+
+Frontend links:
+
+- [Open the Yatra Rakshak frontend](http://localhost:3000/index.html)
+- [Open the profile and ABHA page](http://localhost:3000/index.html#profile)
 
 ---
 
@@ -257,6 +262,10 @@ POST /api/itinerary/generate
    - Navigate to **"Stays"** or packages, click **"Book Now"**.
    - Preview the transparent pricing (Base + GST + Green Eco-Cess) and complete mock UPI checkout.
    - View the generated **IRDAI Travel Mediclaim Certificate** with ₹5,00,000 cashless insurance coverage.
+
+5. **Profile & ABHA Page**:
+   - Open [http://localhost:3000/index.html#profile](http://localhost:3000/index.html#profile) after starting the frontend server.
+   - The `#profile` link opens the profile and ABHA modal directly.
 
 5. **One-Tap 112 / 108 Emergency SOS Drill**:
    - Click the red **"SOS"** button on the navbar or navigate to **"SafeRoute"**.
